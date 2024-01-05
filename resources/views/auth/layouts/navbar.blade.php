@@ -29,10 +29,14 @@
                                 <a class="nav-link" href="{{ route('dashboard') }}">Dashboard</a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link" href="{{ route('change.password') }}">Change Password</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="{{ route('account.delete') }}">Delete Account</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link">{{ auth()->user()->name }}</a>
+                                <a class="nav-link" href="{{route('update.profile')}}">{{
+                                    auth()->user()->name }}</a>
                             </li>
                             <li class="nav-item ms-3">
                                 <form action="{{route('logout')}}" method="post">

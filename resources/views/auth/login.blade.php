@@ -23,6 +23,10 @@
                         <div class="text-danger">{{ $message }}</div>
                         @enderror
                     </div>
+                    <div class="mb-3">
+                        <input type="checkbox" class="form-check-input" id="remember" name="remember">
+                        <label for="remember" class="form-label">Remember me</label>
+                    </div>
                     <button type="submit" class="btn btn-primary">Login</button>
                     <div class="float-end">
                         <a href="{{ route('password.request') }}"
