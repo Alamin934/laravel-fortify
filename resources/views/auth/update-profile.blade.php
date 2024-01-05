@@ -11,15 +11,23 @@
                     <div class="mb-3">
                         <label for="name" class="form-label">Name</label>
                         <input type="text" class="form-control @error('name') is-invalid @enderror" name="name"
-                            id="name" value="{{old('name')}}">
+                            id="name" value="{{ auth()->user()->name}}">
                         @error('name')
+                        <div class="text-danger">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username</label>
+                        <input type="text" class="form-control @error('username') is-invalid @enderror" name="username"
+                            id="username" value="{{ auth()->user()->username}}">
+                        @error('username')
                         <div class="text-danger">{{ $message }}</div>
                         @enderror
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label">Email</label>
                         <input type="email" class="form-control @error('email') is-invalid @enderror" name="email"
-                            id="email" value="{{old('email')}}">
+                            id="email" value="{{auth()->user()->email}}">
                         @error('email')
                         <div class="text-danger">{{ $message }}</div>
                         @enderror

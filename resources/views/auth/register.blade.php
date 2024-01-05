@@ -8,10 +8,18 @@
                 <form action="{{route('register')}}" method="POST" class="mt-3">
                     @csrf
                     <div class="mb-3">
-                        <label for="name" class="form-label">Email</label>
+                        <label for="name" class="form-label">Name</label>
                         <input type="text" class="form-control @error('name') is-invalid @enderror" name="name"
                             id="name" value="{{old('name')}}">
                         @error('name')
+                        <div class="text-danger">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username</label>
+                        <input type="text" class="form-control @error('username') is-invalid @enderror" name="username"
+                            id="username" value="{{old('username')}}">
+                        @error('username')
                         <div class="text-danger">{{ $message }}</div>
                         @enderror
                     </div>
