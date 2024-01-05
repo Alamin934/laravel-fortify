@@ -35,6 +35,9 @@
                                 <a class="nav-link" href="{{ route('account.delete') }}">Delete Account</a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link" href="{{ route('auth.twoFactorAuth') }}">Two Factory</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="{{route('update.profile')}}">{{
                                     auth()->user()->name }}</a>
                             </li>

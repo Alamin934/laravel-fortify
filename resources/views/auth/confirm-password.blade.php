@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="w-50 mx-auto">
-                <h2>Delete Your Account</h2>
+                <h2>Confirm Your Password</h2>
                 <form action="{{route('password.confirm')}}" method="POST" class="mt-3">
                     @csrf
                     <div class="mb-3">

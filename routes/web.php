@@ -24,6 +24,10 @@ Route::get('/update-profile', function () {
     return view('auth.update-profile');
 })->name('update.profile');
 
+Route::get('auth/two-factor-auth', function () {
+    return view('auth.two-factor-auth');
+})->name('auth.twoFactorAuth');
+
 Route::get('/change-password', PasswordController::class)->name('change.password');
 
 Route::get('/dashboard', DashboardController::class)->name('dashboard');
