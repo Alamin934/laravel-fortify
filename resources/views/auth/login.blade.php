@@ -8,8 +8,8 @@
                 <form action="{{route('login')}}" method="POST" class="mt-3">
                     @csrf
                     <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control @error('email') is-invalid @enderror" name="email"
+                        <label for="email" class="form-label">Email or Username</label>
+                        <input type="text" class="form-control @error('email') is-invalid @enderror" name="email"
                             id="email" value="{{old('email')}}">
                         @error('email')
                         <div class="text-danger">{{ $message }}</div>
